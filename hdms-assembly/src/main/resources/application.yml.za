@@ -7,9 +7,9 @@ spring:
     cache: false
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://106.14.0.46:3306/hdms-community?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
-    username: hdms
-    password: hdms123456
+    url: jdbc:mysql://10.253.209.15:3306/hdms-community?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: new_password
     initialization-mode: always
   jpa:
     hibernate:
@@ -19,7 +19,7 @@ spring:
     time-zone: GMT+8
 hdms:
   storage:
-    location: E:\\hdms\\storage
+    location: D:\\hdms
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   global-config:
@@ -32,7 +32,7 @@ logging:
   level:
     com.honvay: debug
 server:
-  port: 8099
+  port: 8091
 ---
 spring:
   profiles: prod

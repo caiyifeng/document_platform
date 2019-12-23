@@ -1,0 +1,175 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=11992, tid=0x00000000000032f0
+#
+# JRE version:  (8.0_161-b12) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.161-b12 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002db8800):  JavaThread "Unknown thread" [_thread_in_vm, id=13040, stack(0x0000000002ee0000,0x0000000002fe0000)]
+
+Stack: [0x0000000002ee0000,0x0000000002fe0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002db8800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=13040, stack(0x0000000002ee0000,0x0000000002fe0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 153088K, used 2631K [0x00000000eab00000, 0x00000000f5580000, 0x0000000100000000)
+  eden space 131584K, 2% used [0x00000000eab00000,0x00000000ead91ec8,0x00000000f2b80000)
+  from space 21504K, 0% used [0x00000000f4080000,0x00000000f4080000,0x00000000f5580000)
+  to   space 21504K, 0% used [0x00000000f2b80000,0x00000000f2b80000,0x00000000f4080000)
+ ParOldGen       total 349696K, used 0K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eab00000)
+  object space 349696K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000d5580000)
+ Metaspace       used 770K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00000000123a0000,0x00000000125b0000] byte_map_base: 0x0000000011da0000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000054fcf860
+ Begin Bits: [0x0000000012e20000, 0x0000000013e20000)
+ End Bits:   [0x0000000013e20000, 0x0000000014e20000)
+
+Polling page: 0x0000000000140000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002fe0000, 0x0000000003250000, 0x0000000011fe0000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.079 loading class java/lang/Short
+Event: 0.079 loading class java/lang/Short done
+Event: 0.079 loading class java/lang/Integer
+Event: 0.079 loading class java/lang/Integer done
+Event: 0.079 loading class java/lang/Long
+Event: 0.080 loading class java/lang/Long done
+Event: 0.082 loading class java/lang/NullPointerException
+Event: 0.082 loading class java/lang/NullPointerException done
+Event: 0.082 loading class java/lang/ArithmeticException
+Event: 0.082 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000013f4a0000 - 0x000000013f4d7000 	C:\Program Files\Java\jdk1.8.0_161\bin\javaw.exe
+0x0000000076d90000 - 0x0000000076f2f000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076b70000 - 0x0000000076c8f000 	C:\Windows\system32\kernel32.dll
+0x000007fefcbe0000 - 0x000007fefcc47000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefcce0000 - 0x000007fefcdbb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd4d0000 - 0x000007fefd56f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefef60000 - 0x000007fefef7f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe760000 - 0x000007fefe88c000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076c90000 - 0x0000000076d8a000 	C:\Windows\system32\USER32.dll
+0x000007fefcc70000 - 0x000007fefccd7000 	C:\Windows\system32\GDI32.dll
+0x000007fefe890000 - 0x000007fefe89e000 	C:\Windows\system32\LPK.dll
+0x000007fefef80000 - 0x000007feff04b000 	C:\Windows\system32\USP10.dll
+0x000007fefae20000 - 0x000007fefb015000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845\COMCTL32.dll
+0x000007fefd0d0000 - 0x000007fefd141000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe730000 - 0x000007fefe75e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefcdc0000 - 0x000007fefcecb000 	C:\Windows\system32\MSCTF.dll
+0x0000000180000000 - 0x000000018009e000 	C:\Windows\LVUAAgentInstBaseRoot\system32\Vozokopot.dll
+0x000007fefa230000 - 0x000007fefa256000 	C:\Windows\LVUAAgentInstBaseRoot\system32\MozartBreathFw.dll
+0x000007fef9c90000 - 0x000007fefa22b000 	C:\Windows\LVUAAgentInstBaseRoot\system32\MozartBreathCore.dll
+0x0000000074190000 - 0x000000007422a000 	C:\Windows\LVUAAgentInstBaseRoot\system32\SteinwayMSVCRT.dll
+0x00000000740c0000 - 0x0000000074190000 	C:\Windows\LVUAAgentInstBaseRoot\system32\SteinwayMSVCSTL.dll
+0x000007fef9c00000 - 0x000007fef9c71000 	C:\Windows\system32\WINSPOOL.DRV
+0x000007fefe690000 - 0x000007fefe727000 	C:\Windows\system32\COMDLG32.dll
+0x000007fefd900000 - 0x000007fefe68b000 	C:\Windows\system32\SHELL32.dll
+0x000007fefced0000 - 0x000007fefd0cf000 	C:\Windows\system32\ole32.dll
+0x000007fefd570000 - 0x000007fefd64b000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefd480000 - 0x000007fefd4cd000 	C:\Windows\system32\WS2_32.dll
+0x000007fefd710000 - 0x000007fefd718000 	C:\Windows\system32\NSI.dll
+0x000007fefa610000 - 0x000007fefa621000 	C:\Windows\system32\WTSAPI32.dll
+0x000007fef9b30000 - 0x000007fef9b57000 	C:\Windows\system32\IPHLPAPI.DLL
+0x000007fef9b20000 - 0x000007fef9b2b000 	C:\Windows\system32\WINNSI.DLL
+0x000007fefbe70000 - 0x000007fefbecb000 	C:\Windows\system32\DNSAPI.dll
+0x000007fef9ae0000 - 0x000007fef9af8000 	C:\Windows\system32\MPR.dll
+0x000007fef9620000 - 0x000007fef965a000 	C:\Windows\LVUAAgentInstBaseRoot\system32\MozartBreathNet.dll
+0x000007fef95f0000 - 0x000007fef961f000 	C:\Windows\LVUAAgentInstBaseRoot\system32\MozartBreathBolo.dll
+0x000007fef95d0000 - 0x000007fef95e5000 	C:\Windows\LVUAAgentInstBaseRoot\system32\MozartBreathProtect.dll
+0x000000006f0b0000 - 0x000000006f182000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\msvcr100.dll
+0x00000000547b0000 - 0x000000005504f000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\server\jvm.dll
+0x000007fef9c80000 - 0x000007fef9c89000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefa790000 - 0x000007fefa7cb000 	C:\Windows\system32\WINMM.dll
+0x000007fefb8d0000 - 0x000007fefb8dc000 	C:\Windows\system32\VERSION.dll
+0x0000000076f30000 - 0x0000000076f37000 	C:\Windows\system32\PSAPI.DLL
+0x0000000060770000 - 0x000000006077f000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\verify.dll
+0x00000000602a0000 - 0x00000000602c9000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\java.dll
+0x000007fef8620000 - 0x000007fef8640000 	C:\Windows\system32\Wlanapi.dll
+0x000007fef8eb0000 - 0x000007fef8eb7000 	C:\Windows\system32\wlanutil.dll
+0x0000000060250000 - 0x0000000060266000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xms512m -Xmx1024m -Dmaven.home=EMBEDDED -Dclassworlds.conf=E:\hdms-community\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2479320008308753614.tmp -Dmaven.multiModuleProjectDirectory=E:\hdms-community\zainfo-community -Dfile.encoding=UTF-8 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B -s D:\JAVA_FILES\apache-maven-3.2.5\conf\settings.xml install -Dmaven.test.skip=true
+java_class_path (initial): /E:/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_161
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_161\lib;C:\Program Files\Java\jdk1.8.0_161\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_161\lib\tools.jar
+PATH=C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IDM Computer Solutions\UltraEditC:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IDM Computer Solutions\UltraEdit;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\bin;C:\Program Files (x86)\UltraEdit\UltraEdit;d:\nodejs\node_global;c:\program files\esafenet\cobra docguard client;D:\JetBrains\WebStorm 2018.3.2\bin;;D:\Roaming\nvm;C:\Program Files\nodejs;E:\eclipse;
+USERNAME=caiyifeng
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24511)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8068928k(2012696k free), swap 8067028k(5048k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.161-b12) for windows-amd64 JRE (1.8.0_161-b12), built on Dec 19 2017 17:52:25 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Nov 08 08:16:21 2019
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

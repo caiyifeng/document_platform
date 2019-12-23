@@ -19,7 +19,7 @@ spring:
     time-zone: GMT+8
 hdms:
   storage:
-    location: E:\\hdms\\storage
+    location: /home/hdms/storage
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   global-config:

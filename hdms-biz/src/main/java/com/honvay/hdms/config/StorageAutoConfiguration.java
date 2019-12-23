@@ -47,6 +47,8 @@ public class StorageAutoConfiguration {
 		return new LocalStorage(storageConfig.getLocation());
 	}
 
+
+	
 	@Bean
 	public Encryptors encryptors() {
 		return new NullEncryptors();
